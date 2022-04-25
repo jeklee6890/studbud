@@ -2,21 +2,28 @@
   "name": "studbud",
   "version": "1.0.0",
   "description": "Web app for studying",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html",
+    "start": "node index.js"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeklee6890/studbud.git"
   },
   "author": "Joshua Lee",
-  "license": "ISC",
+  "license": "ISC", 
   "bugs": {
     "url": "https://github.com/jeklee6890/studbud/issues"
   },
   "homepage": "https://github.com/jeklee6890/studbud#readme",
   "dependencies": {
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
   }
 }
