@@ -1,59 +1,33 @@
-<!DOCTYPE html>          
-                 
-<html lang="en">
-               
-<head>               
-  <title>Hello, world!</title>               
-  <meta charset="UTF-8" />                
-  <meta name="viewport" content="width=device-width,initial-scale=1" />               
-  <meta name="description" content="" />              
-  <!-- <link rel="icon" href="img/favicon.png">  -->
-  <!-- <link rel="stylesheet" href ="style.css"> -->
-  <link rel="stylesheet" href ="./scss/main.scss">                        
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="scss/main.scss" rel="stylesheet" type="text/css">
 </head>
-               
-<body>                             
-  <div id="page1-1"> 
-    <h1>Page</h1>
-    <div id="task-grid" > 
-      <form id="taskform">
-        <label for="task">Task:</label>
-        <input type="text" name="task" id="taskInput" required>
-  
-        <br>
-      <!-- Date input -->
-        <label for="dueDate">Due Date: </label>
-        <input type="date" name="dueDate" id="dueDateInput">
-        <br>
-      <!-- Time input -->
-      <label for="completionTime">Completion Time: </label>
-        <input type="time" name="completionTime" id="completionTimeInput">
-  
-        <br>
-  
-      <label for="estimatedTime">Estimated completion time (in mins):</label>
-      <input type="number" name="estimatedTime" id="estimatedTimeInput">
-      <!-- Priority -->
-      <br>
-  
-      <label for="priority">Task Priority:</label>
-      <select name="prority" id="priorityInput">
-        <option value="">Select one</option>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-  
-      <br>
 
-      <button type="submit">Submit</button>
-    </form>
+<body class="app-container">
 
-    <ul id="tasklist">
-    </ul>
-    
-    <script src="script.js"></script>
-    <!-- Swap the scripts to see the working solution -->
-    <!-- <script src="solution.js"></script> -->
-  </body>
+    <nav class="vertical top-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+            <li class="nav-item"><a href="tasklist.html">Tasks</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page-container">
+        <h1>Hello World Wide Web</h1>
+
+        <p>This time with <a href="https://expressjs.com/">Express</a> + <a href="https://v2.parceljs.org/">Parcel</a> + <a href="https://sass-lang.com/">SASS (SCSS)</a>!</p>
+    </div>
+
+
+
+
+    <script src="tasklist.js">
+    </script>
+</body>
+
 </html>
