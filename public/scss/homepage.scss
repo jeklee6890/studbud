@@ -1,14 +1,34 @@
+* {
+    margin: 2%;
+}
+
+h1 {
+    text-align: center;
+}
+
 .daily-reminder {
-    width: 50%;
-    height: 50%;
-    margin-top: 20%;
+    width: 45%;
     border: 2px;
+    border-style: solid;
+    border-color: black;
+    float: left;
 }
 
 .activity {
-    width: 50%;
-    height: 50%;
-    margin-top: 20%;
-    margin-left: 50%;
+    width: 45%;
+    height: auto;
     border: 2px;
+    border-style: solid;
+    border-color: black;
+    float: right;
+}
+
+#enter {
+   padding: 2% 8%;
+   text-align: center;
+   font-size: 1em;
+   border: none;
+   border-radius: 10px;
+   display: block;
+   margin: 0 auto;
 }
