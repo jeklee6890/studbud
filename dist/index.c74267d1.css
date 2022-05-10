@@ -1,3 +1,18 @@
+.daily-reminder {
+  width: 50%;
+  height: 50%;
+  border: none;
+  margin-top: 20%;
+}
+
+.activity {
+  width: 50%;
+  height: 50%;
+  border: none;
+  margin-top: 20%;
+  margin-left: 50%;
+}
+
 h1 {
   font-size: 5em;
 }
