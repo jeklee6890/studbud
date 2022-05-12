@@ -10,32 +10,33 @@
 
 <body class="app-container">
 
-    <nav class="vertical top-nav">
+    <nav class="side-nav">
         <ul class="nav-links">
             <li class="nav-item"><a href="/index.html">Home</a></li>
             <li class="nav-item"><a href="/tasklist.html" class="active">Tasks</a></li>
         </ul>
     </nav>
 
+    <h1> Kanban Board </h1>
+
+    <main class="cards"> 
+
+    </main>
+
     <div id="page1" class="page-container">
-        <h1>Tasks</h1>
             <div id="task-grid">
                 <form id="taskform">
                     <label for="task">Task:</label>
                     <input type="text" name="task" id="taskInput" required="">
 
-                    <!-- Date input -->
                     <label for="dueDate">Due Date: </label>
                     <input type="date" name="dueDate" id="dueDateInput">
 
-                    <!-- Time input -->
                     <label for="completionTime">Completion Time: </label>
                     <input type="time" name="completionTime" id="completionTimeInput">
 
                     <label for="estimatedTime">Estimated completion time (in mins):</label>
                     <input type="number" name="estimatedTime" id="estimatedTimeInput">
-                    <!-- Priority -->
-
 
                     <label for="priority">Task Priority:</label>
                     <select name="prority" id="priorityInput">

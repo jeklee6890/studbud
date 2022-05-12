@@ -1,0 +1,1 @@
+{"mappings":"AAMA","sources":["public/scss/stopwatch.scss"],"sourcesContent":["// .stopwatch {\n//     width: 100%;\n//     background-color: bisque;\n//     text-align: center;\n// }\n\nbutton {\n    width: 20%;\n    height: 3%;\n}"],"names":[],"version":3,"file":"stopwatch.80a13387.css.map","sourceRoot":"/__parcel_source_root/"}

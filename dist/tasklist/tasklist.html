@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="/tasklist/tasklist.c74267d1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app-container">
+
+    <nav class="side-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="/tasklist/tasklist.html" class="active">Tasks</a></li>
+            <li class="nav-item"><a href="/acronym.html">Acronym Maker</a></li>
+            <li class="nav-item"><a href="/account.html">Account Settings</a></li>
+            <li class="nav-item"><a href="/stopwatch/stopwatch.html">Stopwatch</a></li>
+        </ul>
+    </nav>
+
+    <h1> Kanban Board </h1>
+
+    <main class="cards"> 
+
+    </main>
+
+    <div id="page1" class="page-container">
+            <div id="task-grid">
+                <form id="taskform">
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" id="taskInput" required="">
+
+                    <label for="dueDate">Due Date: </label>
+                    <input type="date" name="dueDate" id="dueDateInput">
+
+                    <label for="completionTime">Completion Time: </label>
+                    <input type="time" name="completionTime" id="completionTimeInput">
+
+                    <label for="estimatedTime">Estimated completion time (in mins):</label>
+                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
+
+                    <label for="priority">Task Priority:</label>
+                    <select name="prority" id="priorityInput">
+                        <option value="">Select one</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <br>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="tasklist">
+                    <p id="emptyList">You have not added any tasks yet.</p>
+                    <ul></ul>
+                </div>
+            </div>
+
+    </div>
+
+
+
+    <script src="/tasklist/tasklist.d63667e4.js">
+</script>
+</body>
+
+</html>

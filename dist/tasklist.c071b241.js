@@ -68,6 +68,25 @@ function renderTask(task1) {
     // Clear the input form
     form.reset();
 }
+let cards = document.querySelector('.cards');
+var request = new XMLHttpRequest();
+request.onload = function() {
+    let data = JSON.parse(this.response);
+    console.log(data);
+    if (request.status >= 200 && request.status < 400) data.forEach(function(task) {
+        // console.log(task);
+        // card container
+        let card = document.createElement('div');
+        card.setAttribute('class', 'card');
+        // creating movie titles 
+        // document.getElementById('taskInput');
+        // let heading = document.createElement('h2');
+        // heading.textContent = task.input;
+        // add movie titles and descriptions to the card 
+        cards.appendChild(card);
+        card.appendChild(heading);
+    });
+};
 // Function to remove item from array
 function removeItemFromArray(arr, index) {
     if (index > -1) arr.splice(index, 1);

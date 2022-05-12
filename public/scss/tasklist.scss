@@ -20,3 +20,20 @@
     grid-area: tasklist; 
 }
 
+.side-nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    
+    .nav-item {
+        list-style-type: none;
+        float: left;
+        padding: 1% 2%;
+        text-align: center;
+        width: 20%;
+        background-color: grey;
+        border-style: solid;
+        border-color: red;
+    }
+}
