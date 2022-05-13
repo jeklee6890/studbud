@@ -7,5 +7,43 @@
 button {
     width: 20%;
     height: 3%;
+}
 
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    text-align: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 10%;
+    background-color: red;
+    padding: 3px 10px;
+    transition: all 0.5 ease;
+
+    .bx-menu {
+        position: absolute;
+        left: 75%;
+        top: 50%;
+        color: white;
+        font-size: 200%;
+    }
+
+    p {
+        color: white;
+    }
+
+    .active {
+        width: 50%;
+    }
+
+    
 }

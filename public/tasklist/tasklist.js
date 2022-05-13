@@ -86,20 +86,20 @@ function renderTask(task) {
 
 
 
-let cards = document.querySelector('.cards');
-var request = new XMLHttpRequest();
+// let cards = document.querySelector('.cards');
+// var request = new XMLHttpRequest();
 
-request.onload = function () {
-  let data = JSON.parse(this.response); 
-  console.log(data);
+// request.onload = function () {
+//   let data = JSON.parse(this.response); 
+//   console.log(data);
   
-    if (request.status >= 200 && request.status < 400) {
-        data.forEach(function (task) {
+//     if (request.status >= 200 && request.status < 400) {
+//         data.forEach(function (task) {
         // console.log(task);
 
         // card container
-        let card = document.createElement('div');
-        card.setAttribute('class', 'card');
+        // let card = document.createElement('div');
+        // card.setAttribute('class', 'card');
 
         // creating movie titles 
         // document.getElementById('taskInput');
@@ -108,11 +108,11 @@ request.onload = function () {
 
 
         // add movie titles and descriptions to the card 
-        cards.appendChild(card);
-        card.appendChild(heading);
-        });
-    }
-}
+//         cards.appendChild(card);
+//         card.appendChild(heading);
+//         });
+//     }
+// }
 
 
 

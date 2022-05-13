@@ -5,6 +5,7 @@ h1 {
 .daily-reminder {
   width: 45%;
   float: left;
+  text-align: center;
   border: 2px solid #000;
 }
 
@@ -12,6 +13,7 @@ h1 {
   width: 45%;
   height: auto;
   float: right;
+  text-align: center;
   border: 2px solid #000;
 }
 
@@ -78,6 +80,43 @@ h1 {
 button {
   width: 20%;
   height: 3%;
+}
+
+.controls {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.time {
+  text-align: center;
+}
+
+.sidebar {
+  height: 90%;
+  width: 10%;
+  transition: all .5 ease;
+  background-color: red;
+  padding: 3px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .bx-menu {
+  color: #fff;
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+.sidebar p {
+  color: #fff;
+}
+
+.sidebar .active {
+  width: 50%;
 }
 
 * {

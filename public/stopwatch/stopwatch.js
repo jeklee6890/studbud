@@ -1,16 +1,15 @@
 const timeElement = document.querySelector('.watch .time');
+const buttonStart = document.getElementById('start');
+const buttonStop = document.getElementById('stop');
+const buttonReset = document.getElementById('reset');
 
-const buttonStart = document.getElementsById('stopwatch-start');
-const buttonStop = document.getElementsById('stopwatch-stop');
-const buttonReset = document.getElementsById('stopwatch-reset');
-
-let seconds = 3493;
+let seconds = 0;
 let interval = null;
 
 
-start_btn.addEventListener('click', start);
-stop_btn.addEventListener('click', stop);
-reset_btn.addEventListener('click', reset);
+buttonStart.addEventListener('click', startTimer);
+buttonStop.addEventListener('click', stopTimer);
+buttonReset.addEventListener('click', resetTimer);
 
 
 function timer() {
@@ -37,7 +36,7 @@ function timer() {
 
 function startTimer() {
     if(interval) {
-        return
+        return;
     }
     interval = setInterval(timer, 1000);
 }
@@ -54,4 +53,11 @@ function resetTimer() {
     stop();
     seconds = 0;
     timeElement.innerText = "00:00:00";
+}
+
+let button = document.querySelector('i');
+let sidebar = document.querySelector('.sidebar');
+
+button.onclick = function() {
+    sidebar.classList.toggle(".active");
 }
