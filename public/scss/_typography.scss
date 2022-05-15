@@ -2,3 +2,12 @@ h1 {
     font-size: 5em;
     color: red;
 }
+
+.add-task {
+    font-size: 1.5em;
+    color: white;
+
+    &:hover {
+        color: black;
+    }
+}

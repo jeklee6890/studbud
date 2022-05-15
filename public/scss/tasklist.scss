@@ -9,6 +9,7 @@
     grid-area: taskform;
     max-width: 300px;
     margin: 0 auto;
+    display: none;
 
     label {
         display: block;
@@ -37,3 +38,57 @@
         border-color: red;
     }
 }
+
+.kanban-board {
+    display: flex;
+    background-color: salmon;
+    padding: 3%;
+}
+
+.kanban-columns {
+    flex: 1;
+
+    .kanban-column-title {
+        margin-bottom: 5px;
+        color: white;
+        user-select: none;
+    }
+
+    .card-input {
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: white;
+        cursor: pointer;
+    }
+
+    .dropzone {
+        height: 10px;
+        transition: background 0.2s, height 0.2s;
+
+        &:active {
+            height: 20px;
+            background: rgba(113, 203, 224, 0.25);
+        }
+    }
+
+    .add-task {
+        width: 100%;
+        padding: 5% 5%;
+        background-color:rgba(113, 203, 224);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: ease 0.2s; 
+
+        &:hover {
+            background-color: rgba(113, 184, 202);
+            transition: ease 0.2s; 
+        }
+    }
+}
+
+.kanban-columns:not(:last-child) {
+    margin-right: 2%;
+}
+
