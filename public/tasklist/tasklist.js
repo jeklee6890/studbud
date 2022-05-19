@@ -13,8 +13,8 @@ var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
 
-const targetDiv = document.getElementById("taskform");
-const btn = document.getElementById("add-task");
+const targetDiv = document.getElementsById("taskform");
+const btn = document.getElementByClassName("add-task");
 
 btn.onclick = function () {
   if (targetDiv.style.display == "none") {
