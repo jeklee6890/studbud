@@ -3,11 +3,19 @@ h1 {
     color: red;
 }
 
-.add-task {
+#add-task {
     font-size: 1.5em;
     color: white;
 
     &:hover {
         color: black;
     }
+}
+
+.dark-mode {
+    color: white;
+}
+
+.light-mode {
+    color: black;
 }

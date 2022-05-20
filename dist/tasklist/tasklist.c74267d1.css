@@ -36,12 +36,20 @@ h1 {
   font-size: 5em;
 }
 
-.add-task {
+#add-task {
   color: #fff;
   font-size: 1.5em;
 }
 
-.add-task:hover {
+#add-task:hover {
+  color: #000;
+}
+
+.dark-mode {
+  color: #fff;
+}
+
+.light-mode {
   color: #000;
 }
 
@@ -101,8 +109,10 @@ button {
 
 #taskform {
   max-width: 300px;
+  background-color: red;
   grid-area: taskform;
   margin: 0 auto;
+  padding: 10% 60%;
   display: none;
 }
 
@@ -168,7 +178,7 @@ button {
   background: #71cbe040;
 }
 
-.kanban-columns .add-task {
+.kanban-columns #add-task {
   width: 100%;
   cursor: pointer;
   background-color: #71cbe0;
@@ -178,13 +188,21 @@ button {
   transition: all .2s;
 }
 
-.kanban-columns .add-task:hover {
+.kanban-columns #add-task #add-task:hover {
   background-color: #71b8ca;
   transition: all .2s;
 }
 
 .kanban-columns:not(:last-child) {
   margin-right: 2%;
+}
+
+.dark-mode {
+  background-color: #000;
+}
+
+.light-mode {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=tasklist.c74267d1.css.map */

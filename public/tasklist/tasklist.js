@@ -12,9 +12,9 @@ var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
-
-const targetDiv = document.getElementsById("taskform");
-const btn = document.getElementByClassName("add-task");
+// button to show task list 
+const targetDiv = document.getElementById("taskform");
+const btn = document.getElementById("add-task");
 
 btn.onclick = function () {
   if (targetDiv.style.display == "none") {
@@ -24,6 +24,15 @@ btn.onclick = function () {
   }
 };
 
+// // button to change between dark and light mode 
+// const btn1 = document.getElementById("dark-light");
+
+// btn1.onclick = function () {
+//     var element = document.body;
+//     if (element.classList("dark-mode")) {
+//         element.classList.toggle("light-mode");
+//     }
+// }
 
 
 // Form submission event listener

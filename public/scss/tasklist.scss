@@ -10,6 +10,8 @@
     max-width: 300px;
     margin: 0 auto;
     display: none;
+    background-color: red;
+    padding: 10% 60%;
 
     label {
         display: block;
@@ -72,7 +74,7 @@
         }
     }
 
-    .add-task {
+    #add-task {
         width: 100%;
         padding: 5% 5%;
         background-color:rgba(113, 203, 224);
@@ -81,11 +83,13 @@
         cursor: pointer;
         transition: ease 0.2s; 
 
-        &:hover {
-            background-color: rgba(113, 184, 202);
-            transition: ease 0.2s; 
+
+    #add-task:hover {
+        background-color: rgba(113, 184, 202);
+        transition: ease 0.2s; 
         }
     }
+
 }
 
 .kanban-columns:not(:last-child) {
