@@ -31,8 +31,19 @@ h1 {
   display: block;
 }
 
+body {
+  color: #000;
+}
+
+body.dark, #dark {
+  color: #fff;
+}
+
+#light {
+  color: #000;
+}
+
 h1 {
-  color: red;
   font-size: 5em;
 }
 
@@ -42,14 +53,6 @@ h1 {
 }
 
 #add-task:hover {
-  color: #000;
-}
-
-.dark-mode {
-  color: #fff;
-}
-
-.light-mode {
   color: #000;
 }
 
@@ -197,12 +200,32 @@ button {
   margin-right: 2%;
 }
 
-.dark-mode {
-  background-color: #000;
+body {
+  background-color: #fff;
+  transition: all .5s;
 }
 
-.light-mode {
+body button {
+  background-color: #000;
+  transition: all .5s;
+}
+
+body button:hover {
+  transform: scale(1.1);
+}
+
+body.dark {
+  background-color: #000;
+  transition: all .5s;
+}
+
+body.dark button {
   background-color: #fff;
+  transition: all .5s;
+}
+
+body.dark button:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=tasklist.c74267d1.css.map */

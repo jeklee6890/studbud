@@ -1,6 +1,21 @@
+body {
+    color: black;
+}
+
+body.dark {
+    color: white;
+}
+
+#dark {
+    color: white;
+}
+
+#light {
+    color: black;
+}
+
 h1 {
     font-size: 5em;
-    color: red;
 }
 
 #add-task {
@@ -12,10 +27,3 @@ h1 {
     }
 }
 
-.dark-mode {
-    color: white;
-}
-
-.light-mode {
-    color: black;
-}

@@ -25,6 +25,40 @@
 
     <main class="kanban-board"> 
         <div class="kanban-columns">
+            <div id="page1" class="page-container">
+                    <div id="task-grid">
+                        <form id="taskform">
+                            <label for="task">Task:</label>
+                            <input type="text" name="task" id="taskInput" required="">
+        
+                            <label for="dueDate">Due Date: </label>
+                            <input type="date" name="dueDate" id="dueDateInput">
+        
+                            <label for="completionTime">Completion Time: </label>
+                            <input type="time" name="completionTime" id="completionTimeInput">
+        
+                            <label for="estimatedTime">Estimated completion time (in mins):</label>
+                            <input type="number" name="estimatedTime" id="estimatedTimeInput">
+        
+                            <label for="priority">Task Priority:</label>
+                            <select name="prority" id="priorityInput">
+                                <option value="">Select one</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+        
+                            <br>
+        
+                            <button type="submit">Submit</button>
+                        </form>
+                        
+                        <div id="tasklist">
+                            <p id="emptyList">You have not added any tasks yet.</p>
+                            <ul></ul>
+                        </div>
+                    </div>
+            </div>
             <div class="kanban-column-title">Title 1</div>
             <div class="card-items">
                 <div contenteditable="" class="card-input">Task 1</div>
@@ -36,40 +70,6 @@
         
     </main>
 
-    <div id="page1" class="page-container">
-            <div id="task-grid">
-                <form id="taskform">
-                    <label for="task">Task:</label>
-                    <input type="text" name="task" id="taskInput" required="">
-
-                    <label for="dueDate">Due Date: </label>
-                    <input type="date" name="dueDate" id="dueDateInput">
-
-                    <label for="completionTime">Completion Time: </label>
-                    <input type="time" name="completionTime" id="completionTimeInput">
-
-                    <label for="estimatedTime">Estimated completion time (in mins):</label>
-                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
-
-                    <label for="priority">Task Priority:</label>
-                    <select name="prority" id="priorityInput">
-                        <option value="">Select one</option>
-                        <option value="Low">Low</option>
-                        <option value="Medium">Medium</option>
-                        <option value="High">High</option>
-                    </select>
-
-                    <br>
-
-                    <button type="submit">Submit</button>
-                </form>
-                
-                <div id="tasklist">
-                    <p id="emptyList">You have not added any tasks yet.</p>
-                    <ul></ul>
-                </div>
-            </div>
-    </div>
 
     <script src="/tasklist/tasklist.d63667e4.js">
 </script>

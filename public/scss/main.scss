@@ -10,13 +10,32 @@
 
 @import "tasklist.scss";
 
-.dark-mode {
-    background-color: black;
+body {
+    background-color: white;
+    transition: 0.5s;
+
+    button {
+        background-color: black;
+        transition: 0.5s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
     
 }
 
-.light-mode {
-    background-color: white;
+body.dark {
+    background-color: black;
+    transition: 0.5s;
+
+    button {
+        background-color: white;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 // colour palette (cave) - dark mode

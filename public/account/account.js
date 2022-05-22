@@ -1,20 +1,23 @@
-// import Darkmode from 'darkmode-js';
+const darkButton = document.getElementById("dark");
+const darkMode = () => {
+  document.body.classList.toggle("dark");
+}
 
-// new Darkmode().showWidget();
+darkButton.addEventListener("click", () => {
+  setDarkMode = localStorage.getItem("dark");
 
-// const options = {
-//     bottom: '64px', // default: '32px'
-//     right: 'unset', // default: '32px'
-//     left: '32px', // default: 'unset'
-//     time: '0.5s', // default: '0.3s'
-//     mixColor: '#fff', // default: '#fff'
-//     backgroundColor: '#fff',  // default: '#fff'
-//     buttonColorDark: '#100f2c',  // default: '#100f2c'
-//     buttonColorLight: '#fff', // default: '#fff'
-//     saveInCookies: false, // default: true,
-//     label: '🌓', // default: ''
-//     autoMatchOsTheme: true // default: true
-//   }
-  
-//   const darkmode = new Darkmode(options);
-//   darkmode.showWidget();
+  // using localStorage to store the SCSS style of the page i.e. if the page is on darkMode or lightMode
+  if(setDarkMode !== "on") {
+    darkMode();
+    setDarkMode = localStorage.setItem("dark", "on");
+  } else {
+    darkMode();
+    setDarkMode = localStorage.setItem("dark", "null");
+  } 
+});
+
+// checking if darkMode is on when the page is refreshed based on localStorage
+let setDarkMode = localStorage.getItem("dark");
+if(setDarkMode === "on") {
+  darkMode();
+} 
