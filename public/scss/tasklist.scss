@@ -1,26 +1,11 @@
-#task-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "taskform tasklist";
-}
-
 #taskform {
     grid-area: taskform;
-    max-width: 300px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     display: none;
     background-color: red;
     padding: 10% 60%;
-
-    label {
-        display: block;
-        width: 100%;
-    }
-}
-
-#tasklist {
-    grid-area: tasklist; 
 }
 
 .side-nav {
@@ -41,58 +26,59 @@
     }
 }
 
+
 .kanban-board {
     display: flex;
-    background-color: salmon;
+    background-color: #B3B3B3;
     padding: 3%;
+
+    .k-board {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        width: auto;
+
+        .column {
+            float: left;
+            height: 100%;
+        }
+
+        .column > h2 {
+            text-decoration: underline;
+        }
+
+        .add-task {
+            width: 100px;
+            height: 70px;
+            text-align: center;
+            border: none;
+            border-radius: 25px;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            transition: ease 0.4s;
+            background-color: rgb(113, 203, 224);
+            cursor: pointer;
+        }
+
+        #add-task:hover {
+            background-color: rgba(113, 184, 202);
+            transition: ease 0.2s; 
+        }
+
+        #task-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "taskform tasklist";
+        }
+
+        #tasklist {
+            grid-area: tasklist; 
+        }  
+    } 
 }
 
-.kanban-columns {
-    flex: 1;
-
-    .kanban-column-title {
-        margin-bottom: 5px;
-        color: white;
-        user-select: none;
-    }
-
-    .card-input {
-        padding: 10px 15px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        background: white;
-        cursor: pointer;
-    }
-
-    .dropzone {
-        height: 10px;
-        transition: background 0.2s, height 0.2s;
-
-        &:active {
-            height: 20px;
-            background: rgba(113, 203, 224, 0.25);
-        }
-    }
-
-    #add-task {
-        width: 100%;
-        padding: 5% 5%;
-        background-color:rgba(113, 203, 224);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: ease 0.2s; 
-
-
-    #add-task:hover {
-        background-color: rgba(113, 184, 202);
-        transition: ease 0.2s; 
-        }
-    }
-
-}
 
 .kanban-columns:not(:last-child) {
     margin-right: 2%;
 }
-

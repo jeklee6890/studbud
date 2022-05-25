@@ -1,0 +1,48 @@
+#side-timer {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar {
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    left: -450px;
+    transition: 0.5s;
+    background-color: seagreen;
+
+    &:active {
+        left: 0;
+    }
+
+    .timer-side {
+        list-style: none;
+    }
+
+    .toggle-button {
+        position: absolute;
+        top: 150px;
+        left: 450px;
+    
+        span {
+            width: 40px;
+            height: 3px;
+            background: black;
+            display: block;
+            transform: rotate(45deg);
+        }
+    
+        span:nth-child(2) {
+            transform: rotate(-45deg);
+            margin-top: 25px;
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    #sidebar {
+        max-width: 200px;
+    }
+}

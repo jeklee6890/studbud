@@ -1,3 +1,7 @@
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
 body {
     color: black;
 }
@@ -6,19 +10,14 @@ body.dark {
     color: white;
 }
 
-#dark {
-    color: white;
-}
 
-#light {
-    color: black;
-}
+
 
 h1 {
     font-size: 5em;
 }
 
-#add-task {
+.add-task {
     font-size: 1.5em;
     color: white;
 

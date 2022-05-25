@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="/tasklist/tasklist.c74267d1.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Oleo+Script&display=swap" rel="stylesheet">
 </head>
 
 <body class="app-container">
@@ -24,50 +27,56 @@
     
 
     <main class="kanban-board"> 
-        <div class="kanban-columns">
-            <div id="page1" class="page-container">
-                    <div id="task-grid">
-                        <form id="taskform">
-                            <label for="task">Task:</label>
-                            <input type="text" name="task" id="taskInput" required="">
-        
-                            <label for="dueDate">Due Date: </label>
-                            <input type="date" name="dueDate" id="dueDateInput">
-        
-                            <label for="completionTime">Completion Time: </label>
-                            <input type="time" name="completionTime" id="completionTimeInput">
-        
-                            <label for="estimatedTime">Estimated completion time (in mins):</label>
-                            <input type="number" name="estimatedTime" id="estimatedTimeInput">
-        
-                            <label for="priority">Task Priority:</label>
-                            <select name="prority" id="priorityInput">
-                                <option value="">Select one</option>
-                                <option value="Low">Low</option>
-                                <option value="Medium">Medium</option>
-                                <option value="High">High</option>
-                            </select>
-        
-                            <br>
-        
-                            <button type="submit">Submit</button>
-                        </form>
-                        
-                        <div id="tasklist">
-                            <p id="emptyList">You have not added any tasks yet.</p>
-                            <ul></ul>
-                        </div>
-                    </div>
-            </div>
-            <div class="kanban-column-title">Title 1</div>
-            <div class="card-items">
-                <div contenteditable="" class="card-input">Task 1</div>
-                <div class="dropzone"></div>
+        <div id="k-board" class="k-board">
+            <div class="column">
+              <h2>Column 1</h2>
+              <button class="add-task">+ Add Task</button>
             </div>
 
-            <button id="add-task">+ Add Task</button>
+            <div class="column">
+              <h2>Column 2</h2>
+            </div>
+
+            <div class="column">
+              <h2>Column 3</h2>
+            </div>
         </div>
-        
+
+
+        <div id="task-grid">
+            <form id="taskform">
+                <label for="task">Task:</label>
+                <input type="text" name="task" id="taskInput" required="">
+
+                <label for="dueDate">Due Date: </label>
+                <input type="date" name="dueDate" id="dueDateInput">
+
+                <label for="completionTime">Completion Time: </label>
+                <input type="time" name="completionTime" id="completionTimeInput">
+
+                <label for="estimatedTime">Estimated completion time (in mins):</label>
+                <input type="number" name="estimatedTime" id="estimatedTimeInput">
+
+                <label for="priority">Task Priority:</label>
+                <select name="prority" id="priorityInput">
+                    <option value="">Select one</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+    
+            <div id="tasklist">
+                <p id="emptyList">You have not added any tasks yet.</p>
+                <ul></ul>
+            </div>
+            
+            <button id="myBtn">add column</button>
+        </div>
     </main>
 
 
@@ -76,3 +85,5 @@
 </body>
 
 </html>
+
+

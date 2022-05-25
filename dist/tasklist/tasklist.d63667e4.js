@@ -9,21 +9,37 @@ var dueDateInput = document.getElementById("dueDateInput");
 var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
+// an event listener for the 'add column' button which calls the addColumn() function
+document.getElementById("myBtn").addEventListener("click", addColumn);
+// creates a div with a h1 element with the text of "new column". then appends the text to h1, 
+// the h1 to the div and the div to the div element with an id of 'k-board'  
+function addColumn() {
+    console.log("button clicked");
+    var newColumn = document.createElement("div");
+    var newHeading = document.createElement("h2");
+    var headingText = document.createTextNode("new column");
+    var kBoard = document.getElementById("k-board");
+    var newButton = document.createElement("button");
+    newButton.textContent = "+ Add Task";
+    newButton.className += "add-task";
+    newHeading.appendChild(headingText);
+    newColumn.appendChild(newHeading);
+    kBoard.appendChild(newColumn);
+    kBoard.appendChild(newButton);
+}
 // button to show task list 
-const targetDiv = document.getElementById("taskform");
-const btn = document.getElementById("add-task");
-btn.onclick = function() {
-    if (targetDiv.style.display == "none") targetDiv.style.display = "block";
-    else targetDiv.style.display = "none";
-};
-// // button to change between dark and light mode 
-// const btn1 = document.getElementById("dark-light");
-// btn1.onclick = function () {
-//     var element = document.body;
-//     if (element.classList("dark-mode")) {
-//         element.classList.toggle("light-mode");
-//     }
-// }
+// const targetDiv = document.getElementById("taskform");
+// const btn = document.getElementById("add-task");
+// btn.onclick = function () {
+//   if (targetDiv.style.display == "none") {
+//     targetDiv.style.display = "block";
+//   } else {
+//     targetDiv.style.display = "none";
+//   }
+// };
+document.getElementById("add-task").addEventListener("click", function() {
+    document.getElementById("task-grid").classList.add("active");
+});
 // Form submission event listener
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -83,27 +99,6 @@ function renderTask(task1) {
     // Clear the input form
     form.reset();
 }
-// let cards = document.querySelector('.cards');
-// var request = new XMLHttpRequest();
-// request.onload = function () {
-//   let data = JSON.parse(this.response); 
-//   console.log(data);
-//     if (request.status >= 200 && request.status < 400) {
-//         data.forEach(function (task) {
-// console.log(task);
-// card container
-// let card = document.createElement('div');
-// card.setAttribute('class', 'card');
-// creating movie titles 
-// document.getElementById('taskInput');
-// let heading = document.createElement('h2');
-// heading.textContent = task.input;
-// add movie titles and descriptions to the card 
-//         cards.appendChild(card);
-//         card.appendChild(heading);
-//         });
-//     }
-// }
 // Function to remove item from array
 function removeItemFromArray(arr, index) {
     if (index > -1) arr.splice(index, 1);
